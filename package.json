@@ -2,8 +2,10 @@
   "name": "rc-here-maps-example",
   "version": "0.1.0",
   "private": true,
+  "port": 5000,
   "dependencies": {
-    "rc-here-maps": "^1.0.1",
+    "express": "^4.16.3",
+    "rc-here-maps": "^1.0.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-gist": "^1.2.1",
