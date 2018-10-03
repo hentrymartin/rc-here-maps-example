@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/rc-here-maps-example/precache-manifest.a1fde412eca1d09f10e0511bd8f163ad.js"
+  "/rc-here-maps-example/precache-manifest.24fb24403b0bd8356d4c63e2abf65f3d.js"
 );
 
 workbox.clientsClaim();
