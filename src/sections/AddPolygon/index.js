@@ -7,12 +7,13 @@ class AddPolygon extends Component {
     super(props);
 
     this.state = {
-      dataPoints: [52, 12, 100, 49, 11, 100, 30, 5, 100],
+      dataPoints: [28.7, 77.1, 100, 19.07, 72.87, 100, 13.08, 80.27, 100],
       center: {
-        lat: 52,
-        lng: 48,
+        lat: 19.2,
+        lng: 77.1,
       },
       showCode: false,
+      zoom: 4,
     };
   }
 
@@ -24,11 +25,7 @@ class AddPolygon extends Component {
 
   onPolygonShapeChange = () => {
     this.setState({
-      dataPoints: [45, 10, 100, 40, 8, 100, 25, 5, 100],
-      center: {
-        lat: 52,
-        lng: 30,
-      },
+      dataPoints: [28.7, 77.1, 100, 19.07, 72.87, 100, 12.97, 77.59, 100],
     });
   };
 
@@ -48,7 +45,13 @@ class AddPolygon extends Component {
           </div>
           <div className="section__content__map-container">
             <button onClick={this.onPolygonShapeChange}>Change Polygon Shape</button>
-            <HereMap appId="XezsJWhF8JfEucf5ImcN" appCode="HLIInfEMidCaPQtBbWyQuQ" useHTTPS center={this.state.center}>
+            <HereMap
+              appId="XezsJWhF8JfEucf5ImcN"
+              appCode="HLIInfEMidCaPQtBbWyQuQ"
+              useHTTPS
+              center={this.state.center}
+              zoom={this.state.zoom}
+            >
               <Polygon dataPoints={this.state.dataPoints} />
             </HereMap>
           </div>
